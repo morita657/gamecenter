@@ -1,0 +1,80 @@
+<html>
+<style>
+    table {
+        width: 100%;
+        height: 100%;
+    }
+
+    table,
+    tr,
+    td {
+        border: 1px solid #000;
+    }
+
+    td {
+        width: 33%;
+    }
+
+    span {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<script>
+    var click = document.getElementsByClassName("cell");
+    var here = document.getElementById('here');
+    var count = 0;
+    function clickme(e) {
+        if (count++ % 2 == 1) {
+            // display x
+            val = "X";
+            e.textContent = val;
+            console.log(e);
+        }
+        else {
+            // display O
+            val = "O";
+            e.textContent = val;
+        }
+    }
+</script>
+
+<body>
+    <table>
+        <tr>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+            <td class="cell" onclick="clickme(this)">
+                <span id="here"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
